@@ -17,7 +17,7 @@ COPY  . .
 
 # Explicity copy model(in case .dockerignore excluded mlruns)
 # NOTE: destination changed to /app/src/serving/model to match inference.py's path
-COPY src/serving/model/app/src/serving/model
+COPY src/serving/model/app/serving/model
 
 # Copy MLflow run(artifacts+metadata) to the flat /app/model convenience path
 # Copy MLflow run (artifacts + metadata) to the flat /app/model convenience path
@@ -37,3 +37,4 @@ EXPOSE 8000
 
 #7. Run the FastAPI app using uvicorn (change path if needed)
 CMD ["python","-m","uvicorn","src.app.main:app","--host","0.0.0.0","--port","8000"]
+

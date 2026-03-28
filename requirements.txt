@@ -9,3 +9,4 @@ python-dotenv
 joblib
 great-expectations
 pytest
+flask
